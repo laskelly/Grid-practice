@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --primary-color: #fff0ba; 
+  --border-color: #bd456a;
+  --text-color: brown;
+}
+
+.box{
+  background-color: var(--primary-color);
+  margin: 10px;
+  padding: 10px;
+  border-bottom: 2px solid var(--border-color);
+  color: var(--text-color);
+  font-weight: bolder;
+  font-size: larger;
+  text-align: center;
+}
+
+.box:hover{
+  cursor: pointer;
+  transform: translateY(-10px);
+  transition: transform 0.3s ease-in;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid > *:first-child {
+  grid-column: 1 / span 2;
+  grid-row: 1/ span 2;
+}
+
+.grid > *:nth-child(2){
+  grid-row: 1 /span 3;
+}
+
+.grid > *:nth-child(3){
+  grid-column: 1 / span 3;
+}
+
+.grid > *:nth-child(4){
+  grid-column: 1 /span 2;
+}
+
+.grid > *:nth-child(6){
+  grid-column: 1 / span 3;
+}
+
+.grid-2{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.grid-2 > *:first-child{
+  grid-column: 1 /span 2;
+  grid-row: 1 / span 2;
+}
+
+.grid-2 > *:nth-child(4){
+  grid-column: 1 /span 2;
+  grid-row: 3 / span 4;
+}
+
+.grid-2 .box{
+  border: none;
+  background-color: var(--text-color);
+  color: var(--primary-color);
+  box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, .2);
+} 
+
+.grid-2 .box:hover{
+  transition: transform 0.2s ease-out;
+  transform: translateX(15px);
+}
