@@ -78,3 +78,26 @@
   transition: transform 0.2s ease-out;
   transform: translateX(15px);
 }
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-3 .box {
+  background-color: aliceblue;
+  box-shadow: 5px 5px 2px 1px rgb(0,211, 109, .9);
+  /* transform-origin: 12rem; */
+}
+
+.grid-3 .box:hover{
+  transition: transform 0.3s ease-in;
+  transform: skewX(40deg);
+}
+
+#east{
+  transform: rotate(90deg);
+  width: 40px;
+  justify-self: center;
+  margin-top: 20px;
+}
