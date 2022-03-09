@@ -11,7 +11,7 @@
 
 .box{
   background-color: var(--primary-color);
-  margin: 10px;
+  margin: 5px;
   padding: 10px;
   border-bottom: 2px solid var(--border-color);
   color: var(--text-color);
@@ -52,6 +52,7 @@
   grid-column: 1 / span 3;
 }
 
+/* Grid 2 */
 .grid-2{
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -71,7 +72,7 @@
   border: none;
   background-color: var(--text-color);
   color: var(--primary-color);
-  box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, .2);
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
 } 
 
 .grid-2 .box:hover{
@@ -79,6 +80,7 @@
   transform: translateX(15px);
 }
 
+/* Grid 3 */
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -86,13 +88,15 @@
 
 .grid-3 .box {
   background-color: aliceblue;
-  box-shadow: 5px 5px 2px 1px rgb(0,211, 109, .9);
+  border: none;
+  margin-bottom: 15px;
+  box-shadow: 5px 5px 2px 1px rgba(23, 27, 25, 0.9);
   /* transform-origin: 12rem; */
 }
 
 .grid-3 .box:hover{
   transition: transform 0.3s ease-in;
-  transform: skewX(40deg);
+  transform: skewX(10deg);
 }
 
 #east{
@@ -100,4 +104,25 @@
   width: 40px;
   justify-self: center;
   margin-top: 20px;
+}
+
+/* Grid 4 */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: none;
+}
+
+.grid-4 .box{
+  margin: 0;
+  opacity: 0.8;
+  background-image: url(/bg1.jpg);
+  background-attachment: fixed;
+  border:none;
+  color: var(--primary-color)
+}
+
+.grid-4 .box:hover{
+  transition: all 0.3s ease-out;
+  transform: scale(0.9); /*Sorta shrink inwards*/
 }
